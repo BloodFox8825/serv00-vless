@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
     // 这里可以处理非WebSocket请求
     if (req.url === ECHO_PATH) {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end(request.url);
+        res.end(req.url);
     } else {
         console.error("bad request:", req.url);
         res.writeHead(404, { 'Content-Type': 'text/plain' });
